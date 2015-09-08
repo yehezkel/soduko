@@ -1,7 +1,7 @@
 package soduko_test
 
 import (
-	"soduko"
+	"github.com/yehezkel/soduko"
 	"testing"
 )
 
@@ -128,6 +128,6 @@ func ExampleSoduko11() {
 
 	//Output: | 1 |
 	//
-	// 
+	//
 
 }
