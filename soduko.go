@@ -3,24 +3,23 @@ This package find the solution for soduko boards of square sizes of NxM
 where N,M > 0
 
 Take into account that the square size is not the dimensions of the board but
-the dimensions of a single square. For an standard soduko of board 9x9 
+the dimensions of a single square. For an standard soduko of board 9x9
 the sizes are 3x3
 
 look at the  test file for usage examples
 
-the algorithm is similiar to the brute force once with some improvements
-to save time excecution time
+the algorithm is similiar to the brute force one with some improvements
+to save execution time
 
 The idea is to build a SdkCell (Soduko Cell) for each board position
 Every cell contain a reference to 3 unique sets representing
 the items on the same row, column an square
 
-In order to find the solution the board of cells is created first together
+In order to find the solution a board of cells is created together
 with the relations between their respective unique sets
 
-Then a recursive function will pass over the cells setting the values for each 
-of them  
-
+Then a recursive function will pass over the cells setting the values for each
+of them
 */
 package soduko
 
@@ -35,7 +34,7 @@ type SquareSize struct {
 }
 
 /*
-Calculate the amount of items on the soduko board 
+Calculate the amount of items on the soduko board
 according to the square sizes
 */
 func (s *SquareSize) ItemsOnBoard() int {
@@ -180,7 +179,7 @@ type sdkUniqueSet interface {
 /*
 Implementation of the sdkUniqueSet interface using an slice of bools
 in order to save memory and runtime, as in order to know if an
-item is on the set we need to check if the value of the key 
+item is on the set we need to check if the value of the key
 equal to the item is true
 */
 type sdkUniqueValues []bool
